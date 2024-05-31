@@ -1,0 +1,88 @@
+ 
+        // 1° Personagem
+        if(lista1[0] == 1.0){
+
+            // =============  MAGO ==================
+
+            // Vericando qual é a arma do personagem
+            if(lista1[4] == 1.0){
+                ArmaMago arma = new MagiaTransmutacao("Magia da Transmutacao", 0.25);
+                Personagem A = new Mago("Mago", lista1[1], lista1[2], lista1[3], arma);
+            }else{
+                ArmaMago arma = new Kappa("Psi-Kappa", 0.5);
+                Personagem A = new Mago("Mago", lista1[1], lista1[2], lista1[3], arma);
+                
+            }
+            
+        }else if(lista1[0] == 2.0){
+
+            // =============  PALADINO ==================
+
+            // verificando qual é a arma do personagem
+            if(lista1[4] == 1.0){
+                ArmaPaladino arma = new Espada("Espada", 0.3);
+                Personagem A = new Paladino("Paladino", lista1[1], lista1[2], lista1[3], arma);
+            }else{
+                ArmaPaladino arma = new Lanca("Lanca", 0.5);
+                Personagem A = new Paladino("Paladino", lista1[1], lista1[2], lista1[3], arma);
+                A.printStatus();
+            }
+
+           
+        }else if(lista1[0] == 3.0){
+
+            // =============  CLERIGO ==================
+
+            // verificando qual é a arma do personagem
+            if(lista1[4] == 1.0){
+                ArmaClerigo arma = new Martelo("Martelo", 0.6);
+                Personagem A = new Clerigo("Clerigo", lista1[1], lista1[2], lista1[3], arma);
+            }else{
+                ArmaClerigo arma = new Maca("Maca", 0.4);
+                Personagem A = new Clerigo("Clerigo", lista1[1], lista1[2], lista1[3], arma);
+            }
+
+        }
+
+         // 2° Personagem
+         if(lista2[0] == 1.0){
+
+            // =============  MAGO ==================
+
+            // Vericando qual é a arma do personagem
+            if(lista2[4] == 1.0){
+                ArmaMago arma = new MagiaTransmutacao("Magia da Transmutacao", 0.25);
+                Personagem B = new Mago("Mago", lista2[1], lista2[2], lista2[3], arma);
+            }else{
+                ArmaMago arma = new Kappa("Psi-Kappa", 0.5);
+                Personagem B = new Mago("Mago", lista2[1], lista2[2], lista2[3], arma);
+            }
+            
+        }else if(lista2[0] == 2.0){
+
+            // =============  PALADINO ==================
+
+            // verificando qual é a arma do personagem
+            if(lista2[4] == 1.0){
+                ArmaPaladino arma = new Espada("Espada", 0.3);
+                Personagem B = new Paladino("Paladino", lista2[1], lista2[2], lista2[3], arma);
+            }else{
+                ArmaPaladino arma = new Lanca("Lanca", 0.5);
+                Personagem B = new Paladino("Paladino", lista2[1], lista2[2], lista2[3], arma);
+            }
+
+
+        }else if(lista2[0] == 3.0){
+
+            // =============  CLERIGO ==================
+
+            // verificando qual é a arma do personagem
+            if(lista2[4] == 1.0){
+                ArmaClerigo arma = new Martelo("Martelo", 0.6);
+                Personagem B = new Clerigo("Clerigo", lista2[1], lista2[2], lista2[3], arma);
+            }else{
+                ArmaClerigo arma = new Maca("Maca", 0.4);
+                Personagem B = new Clerigo("Clerigo", lista2[1], lista2[2], lista2[3], arma);
+            }
+
+        }
