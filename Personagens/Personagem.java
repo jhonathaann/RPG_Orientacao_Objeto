@@ -35,7 +35,7 @@ public abstract class Personagem{
     /*
      * Função para mostrar na tela os status de cada personagem
      */
-    public void  printStatus(){
+    public void printStatus(){
 
         // Verificando se o personagem esta morto
         if(estaMorto() == false){
@@ -67,9 +67,9 @@ public abstract class Personagem{
 
                 /*
                  * Ataque bem sucedido
-                 * Força E Destreza do atacante devem ser maiores que a Força e a Destreza do atacado
+                 * Destreza do atacante deve ser maior que e a Destreza do atacado
                  */
-                if(this.forca > boneco.forca && this.destreza > boneco.destreza){
+                if(this.destreza > boneco.destreza){
 
                     /*
                      * Subtraindo a vida do personagem B
@@ -83,9 +83,9 @@ public abstract class Personagem{
 
 
                 /* Ataque mal sucedido(defendido E revidado pelo personagem B (inicialmente era quem estava sendo atacado)) 
-                * personagem A possui força OU destreza menores que as respectivas força ou destreza do personagem B
+                * personagem A possui destreza menor que a destreza do personagem B
                 */  
-                }else if(this.forca < boneco.forca || this.destreza < boneco.destreza){
+                }else if(this.destreza < boneco.destreza){
 
                     // saude do personagem A (que era inicialmente o atacante) deve ser subtraida
 
@@ -98,11 +98,11 @@ public abstract class Personagem{
 
                 /*
                  * Ataque defendido(é anulado por B)
-                 * força de A é igual a força de B OU destreza de A é igual a destreza de B
+                 * destreza de A é igual a destreza de B
                  * Nesse caso, ninguem toma dano
                 */
                 
-                }else if(this.forca == boneco.forca || this.destreza == boneco.destreza){
+                }else if(this.destreza == boneco.destreza){
 
                     System.out.printf("O ataque foi defendido, ninguem se machucou!\n");
                 }
