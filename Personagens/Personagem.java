@@ -47,21 +47,21 @@ public abstract class Personagem{
        
     }
 
-    // "boneco" é quem esta sofrendo o ataque 
-    public void atacar(Personagem boneco){
+    // "b" é quem esta sofrendo o ataque 
+    public void atacar(Personagem b){
 
         /*
          * Personagem A (que esta atacando) esta vivo
         */
         if(this.saude >= 1.0){
 
-            System.out.printf("O personagem %s ataca o personagem %s com arma %s.\n", this.nomeTipo, boneco.nomeTipo, this.arma.getNome());
+            System.out.printf("O personagem %s ataca o personagem %s com arma %s.\n", this.nomeTipo, b.nomeTipo, this.arma.getNome());
 
             // Verificando se o personagem B (atacado) esta vivo no momento em que sofre o ataque
-            if(boneco.estaMorto() == true){
+            if(b.estaMorto() == true){
 
                 // B ja esta morto
-                System.out.printf("Pare! O personagem %s ja esta morto!\n", boneco.nomeTipo);
+                System.out.printf("Pare! O personagem %s ja esta morto!\n", b.nomeTipo);
 
             }else{
 
@@ -69,13 +69,13 @@ public abstract class Personagem{
                  * Ataque bem sucedido
                  * Destreza do atacante deve ser maior que e a Destreza do atacado
                  */
-                if(this.destreza > boneco.destreza){
+                if(this.destreza > b.destreza){
 
                     /*
                      * Subtraindo a vida do personagem B
                      */
 
-                    boneco.recebeDano(calculaDano());
+                    b.recebeDano(calculaDano());
 
                     System.out.printf("O ataque foi efetivo com %.1f pontos de dano!\n", calculaDano());
 
@@ -85,13 +85,13 @@ public abstract class Personagem{
                 /* Ataque mal sucedido(defendido E revidado pelo personagem B (inicialmente era quem estava sendo atacado)) 
                 * personagem A possui destreza menor que a destreza do personagem B
                 */  
-                }else if(this.destreza < boneco.destreza){
+                }else if(this.destreza < b.destreza){
 
                     // saude do personagem A (que era inicialmente o atacante) deve ser subtraida
 
-                    recebeDano(boneco.calculaDano()); // calculando o dano causado pelo personagem B
+                    recebeDano(b.calculaDano()); // calculando o dano causado pelo personagem B
 
-                    System.out.printf("O ataque foi inefetivo e revidado com %.1f pontos de dano!\n", boneco.calculaDano());
+                    System.out.printf("O ataque foi inefetivo e revidado com %.1f pontos de dano!\n", b.calculaDano());
 
 
                 // =================================================================================================================
@@ -102,7 +102,7 @@ public abstract class Personagem{
                  * Nesse caso, ninguem toma dano
                 */
                 
-                }else if(this.destreza == boneco.destreza){
+                }else if(this.destreza == b.destreza){
 
                     System.out.printf("O ataque foi defendido, ninguem se machucou!\n");
                 }
@@ -117,7 +117,7 @@ public abstract class Personagem{
         }
 
         printStatus();
-        boneco.printStatus();
+        b.printStatus();
     }
 
     /*

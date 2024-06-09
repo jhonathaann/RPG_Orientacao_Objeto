@@ -29,7 +29,6 @@ public class Main {
        
         
         // Definindo como será realizada a batalha entre os personagens
-        //System.out.println("teste1");
         while(op[0] != 0){
 
             op[1] = input.nextInt();
@@ -39,7 +38,9 @@ public class Main {
 
                     // A ataca ele mesmo
                     A.atacar(A);
+
                 }else{
+
                     // B ataca ele mesmo
                     B.atacar(B);
                 }
@@ -53,6 +54,7 @@ public class Main {
                
                 // B ataca o A B.atacar(A)
                 B.atacar(A);
+                
             }else{
                 System.out.println("Opcao invalida!\n");
             }
@@ -60,7 +62,6 @@ public class Main {
             op[0] = input.nextInt();
             
         }
-        //System.out.println("teste2");
 
         input.close();
 
@@ -87,7 +88,6 @@ public class Main {
             lista1[i] = Float.parseFloat(partes1[i]);
         }
 
-        //input.close();
 
         if(lista1[0] == 1.0){
 
@@ -137,6 +137,5 @@ public class Main {
             return null;
         }
 
-        
     }
 }
