@@ -14,6 +14,6 @@ public class Maca extends ArmaClerigo {
         /*
          * Invocando o construtor da super classe (ArmaClerigo)
          */
-        super("Maca", 0.4);
+        super("Maça", 0.4);
     }
 }

@@ -14,6 +14,6 @@ public class MagiaTransmutacao extends ArmaMago {
         /*
          * Invocando o Construtor da super classe (no caso, ArmaMago)
          */
-        super("Magia da Transmutacao", 0.25);
+        super("Magia da Transmutação", 0.25);
     }
 }

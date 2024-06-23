@@ -4,7 +4,7 @@ package Armas;
  * essa Classe precisa de um objeto do tipo "Personagem" para existir
  */
 
-public abstract class Arma {
+ public abstract class Arma {
     
     /*
      * Defindo os atributos de instândia da classe
@@ -24,13 +24,13 @@ public abstract class Arma {
      * Método publico que retorna o nome da arma
      */
     public String getNome(){
-        return nome;
+        return this.nome;
     }
 
     /*
      * Método público que retorna o dano que a arma causa
      */
     public double getModificadorDano(){
-        return modDano;
+        return this.modDano;
     }
 }

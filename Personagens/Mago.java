@@ -4,14 +4,14 @@ package Personagens;
  * Essa classe estende a classe abstrata Personagem
  */
 
-import Armas.Arma;
+import Armas.ArmaMago.ArmaMago;
 
 public class Mago extends Personagem {
 
     /*
      * Construtor da classe Mago
      */
-    public Mago(String nomeTipo, double saude, double forca, double destreza, Arma arma){
+    public Mago(String nomeTipo, double saude, double forca, double destreza, ArmaMago arma){
 
         /*
          * Chamando o Construtor da classe super classe (Personagem)

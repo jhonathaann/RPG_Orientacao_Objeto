@@ -27,7 +27,6 @@ public abstract class Personagem{
         this.destreza = destreza;
         this.arma = arma;
 
-        printStatus();
     }
 
     /* --------- Descrevendo os Métodos da Classe Personagem -------------- */
@@ -41,7 +40,7 @@ public abstract class Personagem{
         if(estaMorto() == false){
             System.out.printf("%s [Saude: %.1f, Forca: %.1f, Destreza: %.1f, %s]\n",this.nomeTipo, this.saude, this.forca, this.destreza, this.arma.getNome());
         }else{
-            System.out.printf("%s [Morreu, Forca: %.1f, Destreza: %.1f, %s]\n",this.nomeTipo, this.saude, this.forca, this.destreza, this.arma.getNome());
+            System.out.printf("%s [Morto, Forca: %.1f, Destreza: %.1f, %s]\n",this.nomeTipo, this.forca, this.destreza,this.arma.getNome());
         }
 
        
@@ -55,13 +54,13 @@ public abstract class Personagem{
         */
         if(this.saude >= 1.0){
 
-            System.out.printf("O personagem %s ataca o personagem %s com arma %s.\n", this.nomeTipo, b.nomeTipo, this.arma.getNome());
+            System.out.printf("O %s ataca o %s com %s.\n", this.nomeTipo, b.nomeTipo, this.arma.getNome());
 
             // Verificando se o personagem B (atacado) esta vivo no momento em que sofre o ataque
             if(b.estaMorto() == true){
 
                 // B ja esta morto
-                System.out.printf("Pare! O personagem %s ja esta morto!\n", b.nomeTipo);
+                System.out.printf("Pare! O %s ja esta morto!\n", b.nomeTipo);
 
             }else{
 
@@ -113,11 +112,9 @@ public abstract class Personagem{
             
             // Caso o personagem selecionado para atacar ja estiver morto
 
-            System.out.printf("O personagem %s não consegue atacar, pois esta morto.\n", this.nomeTipo);
+            System.out.printf("O %s não consegue atacar, pois está morto.\n", this.nomeTipo);
         }
 
-        printStatus();
-        b.printStatus();
     }
 
     /*
