@@ -13,4 +13,4 @@ Este repositório contém a implementação de um sistema de combates para um jo
 - **Ações disponíveis:**  
   - Atacar inimigos e se defender de ataques.  
 
-Este projeto é uma introdução a mecânicas básicas de combate em jogos RPG, com foco em lógica de programação e estruturação em Java.  
+Este projeto é na verdade um trabalho prático da minha disciplina de Orientação a Objetos.  
